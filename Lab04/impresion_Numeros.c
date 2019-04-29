@@ -9,6 +9,7 @@ int main (int argc, char** argv)
     // Inicializacion de la variable
     printf("Digite el numero entero para la piramide: \n");
     scanf("%d", &n);
+    printf("\n");
 
     int scale[n-1];
     int i,j;
