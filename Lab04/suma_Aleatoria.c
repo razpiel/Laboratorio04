@@ -25,8 +25,11 @@ int main(int argc, char** argv)
         // Si no se cumple con el criterio en algun momento, rompe el bucle
         if(numRamdom > infLimit && numRamdom < supLimit)
         {
-            sum = sum + numRamdom;
-            n++;
+            if(numRamdom%2==0) // Se separa esta seccion para mayor control.
+            {
+                sum = sum + numRamdom;
+                n++;
+            }
         }
         else
         {
