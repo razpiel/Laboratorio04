@@ -16,11 +16,13 @@ int main(int argc, char** argv)
     printf("Ingrese el limite superior: \n");
     scanf("%d", &supLimit);
 
+    // Inicio de bucle para comprobar status del numero variable
     do
     {
-        srand(time(NULL));
+        srand(time(NULL)); // Ingresa variabilidad a la entrada
         int numRamdom = infLimit +  rand() % (supLimit + 1 - infLimit);
         
+        // Si no se cumple con el criterio en algun momento, rompe el bucle
         if(numRamdom > infLimit && numRamdom < supLimit)
         {
             sum = sum + numRamdom;
@@ -36,7 +38,7 @@ int main(int argc, char** argv)
 
     }while(n<1000);
 
-    if(n==1000)
+    if(n==1000) // Inprime la suma si ya tiene los 1000 numeros sumados
     {
         printf("La suma total de los 1000 numeros es: %d \n", sum);
     }
